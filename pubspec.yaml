@@ -34,12 +34,10 @@ dependencies:
     sdk: flutter
   flutter_bloc: ^8.1.4
   flutter_islamic_icons: ^1.0.2
-  font_awesome_flutter: ^10.7.0
-  hadith: ^1.0.0
   intl: ^0.19.0
   percent_indicator: ^4.2.3
   quran: ^1.2.3
-  scrollable_positioned_list: ^0.3.8
+  url_launcher: ^6.1.6
 
 dev_dependencies:
   flutter_lints: ^2.0.0
@@ -57,7 +55,6 @@ flutter:
   uses-material-design: true
   # To add assets to your application, add an assets section, like this:
   assets:
-    - assets/hafs_smart_v8.json
     - assets/images/quran.png
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

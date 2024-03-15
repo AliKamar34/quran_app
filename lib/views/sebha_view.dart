@@ -12,15 +12,19 @@ class SebhaView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(
+    return 
+    BlocProvider(
       create: (context) => SebhaCubit(),
-      child: Scaffold(
-        backgroundColor: kScaffoldColor,
-        body: Column(
-          children: [
-            const CustomAppBar(title: 'السبحه'),
-            SebhaViewBody(),
-          ],
+      child: 
+      SafeArea(
+        child: Scaffold(
+          backgroundColor: kScaffoldColor,
+          body: Column(
+            children: [
+              const CustomAppBar(title: 'السبحه'),
+              SebhaViewBody(),
+            ],
+          ),
         ),
       ),
     );

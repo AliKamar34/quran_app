@@ -10,7 +10,7 @@ class CustomAppBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       color: kPrimaryColor,
-      height: 80,
+      height: 70,
       width: double.infinity,
       child:  Center(
         child: Text(
