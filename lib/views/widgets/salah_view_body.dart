@@ -101,6 +101,7 @@ class SalahViewBody extends StatelessWidget {
                   CustomSalaContainer(
                       time: formatTime(ishaTime), salah: 'العشاء'),
                 ],
+             
               ),
             ),
           ],
@@ -111,9 +112,16 @@ class SalahViewBody extends StatelessWidget {
 }
 
 String formatTime(String time) {
-  // تحويل الوقت إلى كائن DateTime
-  DateTime parsedTime = DateFormat('HH:mm').parse(time);
-  // تنسيق الوقت بنظام 12 ساعة
-  String formattedTime = DateFormat('hh:mm a').format(parsedTime);
-  return formattedTime;
+  
+  try {
+    DateTime parsedTime = DateFormat('HH:mm').parse(time);
+   
+    String formattedTime = DateFormat('hh:mm a').format(parsedTime);
+    return formattedTime;
+  } on Exception catch (e) {
+    print(e);
+    return time;
+  }
 }
+
+

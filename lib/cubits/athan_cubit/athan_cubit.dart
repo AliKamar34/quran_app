@@ -10,14 +10,15 @@ class AthanCubit extends Cubit<AthanState> {
   AthanCubit() : super(AthanInitial());
 
   PrayerTimingsModel? prayerTimingsModel;
-  
+
   getTimePray() async {
     emit(AthanLoading());
     try {
       prayerTimingsModel = await AthanService(Dio()).getPrayerTime();
 
       emit(AthanSuccess());
-    } on Exception catch (e) {
+    }  catch (e) {
+      print( 'this is the error in the athan cubit $e');
       emit(Athanfailuer());
     }
   }
