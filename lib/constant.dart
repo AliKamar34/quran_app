@@ -1,13 +1,28 @@
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 const kPrimaryColor = Color(0xff1E1F26);
 const kScaffoldColor = Color(0xff415A77);
 
 const kLateefFontFamily = 'Lateef';
 const kArabicFontSize = 24;
-const kMushafFontSize = 30;
+double kMushafFontSize = 35;
 const kArabicFont = 'me_quran';
 const kQuranFont = 'quran_font';
+
+Future saveSettings() async {
+  final prefs = await SharedPreferences.getInstance();
+  await prefs.setInt('kMushafFontSize', kMushafFontSize.toInt());
+}
+
+Future getSewtting() async {
+  try {
+    final prefs = await SharedPreferences.getInstance();
+    kMushafFontSize =  prefs.getInt('kMushafFontSize')!.toDouble();
+  } catch (_) {
+    kMushafFontSize = 35;
+  }
+}
 
 List<Map> arabicName = [
   {"surah": 1, "name": "الفاتحة"},
@@ -135,7 +150,7 @@ List<Map> links = [
     'name': 'ليله رمضان',
     'url': 'https://youtu.be/Yx88r8QcsoU?si=exT9lox4LR3683mP',
   },
-   {
+  {
     'name': 'وعي',
     'url': 'https://youtube.com/@waie?si=BSvE_noqrc580PL8',
   },
@@ -170,8 +185,6 @@ List<Map> links = [
         'https://youtube.com/playlist?list=PLSSxr3Rf2_X08SJxnv0bvsz-L1GjzNlIO&si=VyXzW_ZmtT2cn5V8',
   },
 ];
-
-
 
 List<int> noOfVerses = [
   7,

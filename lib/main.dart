@@ -7,6 +7,7 @@ import 'package:quran_app/views/hadeeth_view.dart';
 import 'package:quran_app/views/moshaf_view.dart';
 import 'package:quran_app/views/salah_view.dart';
 import 'package:quran_app/views/sebha_view.dart';
+import 'package:quran_app/views/setting_view.dart';
 import 'package:quran_app/views/soura_view.dart';
 import 'package:quran_app/views/splash_view.dart';
 
@@ -40,6 +41,7 @@ class MyApp extends StatelessWidget {
           LinksView.id: (context) => const LinksView(),
           SalahView.id: (context) => const SalahView(),
           MoshafView.id: (context) => const MoshafView(),
+          SettingView.id:(context) => const SettingView(),
         },
       ),
     );

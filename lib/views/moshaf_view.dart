@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:quran_app/constant.dart';
 import 'package:quran_app/views/widgets/custom_app_bar.dart';
+import 'package:quran_app/views/widgets/moshaf_app_bar.dart';
 import 'package:quran_app/views/widgets/soura_container.dart';
 import 'package:quran/quran.dart' as quran;
 
@@ -14,7 +15,7 @@ class MoshafView extends StatelessWidget {
         backgroundColor: kScaffoldColor,
         body: Column(
           children: [
-            const CustomAppBar(
+            const CustomMoshafAppBar(
               title: 'القران الكريم ',
             ),
             Expanded(

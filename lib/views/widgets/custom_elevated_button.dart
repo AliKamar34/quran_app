@@ -11,18 +11,21 @@ class CustomElevatedButton extends StatelessWidget {
   final String number;
   void Function()? onPressed;
   bool? primaryColor;
+
   @override
   Widget build(BuildContext context) {
+    double buttonWidth = MediaQuery.of(context).size.width;
     return ElevatedButton(
       onPressed: onPressed,
       style: ElevatedButton.styleFrom(
-        minimumSize: const Size(40, 25),
+        minimumSize: Size(buttonWidth * 0.00001, 25),
         backgroundColor:
             (primaryColor == true) ? kPrimaryColor : kScaffoldColor,
       ),
       child: Text(
         number,
-        style: const TextStyle(fontFamily: kLateefFontFamily, fontSize: 20),
+        style: const TextStyle(
+            fontFamily: kLateefFontFamily, fontSize: 19, color: Colors.white),
       ),
     );
   }

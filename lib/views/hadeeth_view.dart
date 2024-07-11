@@ -46,7 +46,9 @@ class LinksView extends StatelessWidget {
                               Text(
                                 links[index]['name'],
                                 style: const TextStyle(
-                                    fontFamily: kLateefFontFamily, fontSize: 24),
+                                    fontFamily: kLateefFontFamily,
+                                    fontSize: 24,
+                                    color: Colors.white),
                               )
                             ],
                           ),

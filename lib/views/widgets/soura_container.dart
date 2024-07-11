@@ -31,25 +31,28 @@ class CustomSouraContainer extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            // IconButton(
-            //   onPressed: () {},
-            //   icon: const Icon(Icons.play_arrow_rounded),
-            // ),
             Text(
               souraPlace == 'Makkah' ? 'مكيه' : 'مدنيه',
-              style:
-                  const TextStyle(fontSize: 20, fontFamily: kLateefFontFamily),
+              style: const TextStyle(
+                  fontSize: 20,
+                  fontFamily: kLateefFontFamily,
+                  color: Colors.white),
             ),
             Column(
               children: [
                 Text(
                   souraName,
-                  style: const TextStyle(fontFamily: kArabicFont, fontSize: 20),
+                  style: const TextStyle(
+                      fontFamily: kArabicFont,
+                      fontSize: 20,
+                      color: Colors.white),
                 ),
                 Text(
                   'عدد   اياتها  :   $noOfAyat',
                   style: const TextStyle(
-                      fontFamily: kLateefFontFamily, fontSize: 12),
+                      fontFamily: kLateefFontFamily,
+                      fontSize: 12,
+                      color: Colors.white),
                 ),
               ],
             ),

@@ -13,8 +13,8 @@ List<dynamic> getSourah(int souraNumber) {
             children: [
               TextSpan(
                 text: quran.getVerse(souraNumber, i, verseEndSymbol: true),
-                style: const TextStyle(
-                  fontSize: 30,
+                style:  TextStyle(
+                  fontSize: kMushafFontSize,
                   fontFamily: kLateefFontFamily,
                   color: Colors.black,
                 ),
@@ -23,8 +23,8 @@ List<dynamic> getSourah(int souraNumber) {
                   ? TextSpan(
                       text: quran.getVerse(souraNumber, i + 1,
                           verseEndSymbol: true),
-                      style: const TextStyle(
-                        fontSize: 28,
+                      style:  TextStyle(
+                        fontSize: kMushafFontSize,
                         fontFamily: kLateefFontFamily,
                         color: Colors.black,
                       ),
